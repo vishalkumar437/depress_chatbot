@@ -2,7 +2,6 @@ from flask import Flask,render_template,request,redirect,url_for
 import os
 import openai
 openai.api_key = os.getenv("OPENAI_KEY") 
-openai.api_key = 'sk-' 
 messages = []
 system_msg = "You are a drepression assist chatbot only and answer in short keep it 1-2 lines."
 messages.append({"role": "system", "content": system_msg})
@@ -34,4 +33,5 @@ def start():
 # start() 
 if __name__=="__main__":
 	app.run(debug=False,host='0.0.0.0')
+
 
